@@ -1,0 +1,13 @@
+<ion-navbar *navbar>
+  <ion-title>
+    {{title(collections)}}
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="home">
+  <ion-list>
+    <ion-item *ngFor="let collection of hack(collections)" (click)="openPage(collection)">
+      {{collection["atom:title"]["#text"]}}
+    </ion-item>
+  </ion-list>
+</ion-content>
